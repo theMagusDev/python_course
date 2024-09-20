@@ -3,6 +3,7 @@ https://leetcode.com/problem-list/string/
 https://leetcode.com/problems/count-and-say/description/
 """
 
+
 class Solution:
     def countAndSay(self, n: int) -> str:
         current_str = "1"

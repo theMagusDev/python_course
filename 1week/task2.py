@@ -13,7 +13,7 @@ class Solution:
 
         max_length = 0
         letters = set()
-        for i in range (0, len(s)):
+        for i in range(0, len(s)):
             letters.clear()
             for j in range(i, len(s)):
                 if s[j] not in letters:

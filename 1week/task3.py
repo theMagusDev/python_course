@@ -10,6 +10,7 @@ def are_different(char1: chr, char2: chr) -> int:
     else:
         return 0
 
+
 class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
         init_value = max(len(word1), len(word2)) + 1
