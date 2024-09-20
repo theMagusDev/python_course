@@ -5,21 +5,21 @@ https://leetcode.com/problems/count-and-say/description/
 
 class Solution:
     def countAndSay(self, n: int) -> str:
-        currentStr = "1"
-        resultingStr = ""
+        current_str = "1"
+        resulting_str = ""
 
-        leftPtr, rightPtr = 0, 0
+        left_ptr, right_ptr = 0, 0
         counter = 0
         for i in range(1, n):
-            leftPtr, rightPtr = 0, 0
+            left_ptr, right_ptr = 0, 0
             counter = 0
-            resultingStr = ""
-            while leftPtr <= len(currentStr) - 1:
-                while rightPtr <= len(currentStr) - 1 and currentStr[leftPtr] == currentStr[rightPtr]:
+            resulting_str = ""
+            while left_ptr <= len(current_str) - 1:
+                while right_ptr <= len(current_str) - 1 and current_str[left_ptr] == current_str[right_ptr]:
                     counter += 1
-                    rightPtr += 1
-                resultingStr += str(counter) + currentStr[leftPtr]
-                leftPtr = rightPtr
+                    right_ptr += 1
+                resulting_str += str(counter) + current_str[left_ptr]
+                left_ptr = right_ptr
                 counter = 0
-            currentStr = resultingStr
-        return currentStr
+            current_str = resulting_str
+        return current_str

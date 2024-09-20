@@ -11,7 +11,7 @@ class Solution:
         if len(s) == 1:
             return 1
 
-        maxLength = 0
+        max_length = 0
         letters = set()
         for i in range (0, len(s)):
             letters.clear()
@@ -19,7 +19,7 @@ class Solution:
                 if s[j] not in letters:
                     letters.add(s[j])
                 else:
-                    maxLength = max(maxLength, len(letters))
+                    max_length = max(max_length, len(letters))
                     break
-            maxLength = max(maxLength, len(letters))
-        return maxLength
+            max_length = max(max_length, len(letters))
+        return max_length

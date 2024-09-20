@@ -4,7 +4,7 @@ https://leetcode.com/problems/edit-distance/description/
 """
 
 
-def areDifferent(char1: chr, char2: chr) -> int:
+def are_different(char1: chr, char2: chr) -> int:
     if char1 != char2:
         return 1
     else:
@@ -23,6 +23,6 @@ class Solution:
                 matrix[i][j] = min(
                     matrix[i][j-1] + 1,
                     matrix[i-1][j] + 1,
-                    matrix[i-1][j-1] + areDifferent(word1[i-1], word2[j-1])
+                    matrix[i-1][j-1] + are_different(word1[i - 1], word2[j - 1])
                 )
         return matrix[len(word1)][len(word2)]
