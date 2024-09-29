@@ -26,6 +26,3 @@ class Solution:
             if sliding_window_dict == pattern_dict:
                 result.append(left_ptr)
         return result
-
-sol = Solution
-print(sol.findAnagrams(s="cbaebabacd", p="abc"))
