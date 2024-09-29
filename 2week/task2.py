@@ -1,3 +1,9 @@
+"""
+https://leetcode.com/problem-list/string/
+https://leetcode.com/problems/simplify-path/description/
+"""
+
+
 class Solution:
     def simplifyPath(self, path: str) -> str:
         while '//' in path:
