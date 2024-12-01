@@ -26,7 +26,6 @@ class Solution:
         left, right = 0, len(nums) - 1
         pivot = -1
         while right - left > 1:
-            print(f"left = {left}, right = {right}")
             mid = left + floor((right - left) / 2)
             if nums[mid] > nums[right]:
                 left = mid
@@ -36,16 +35,16 @@ class Solution:
                 break
 
         if nums[left] < nums[right]:
-            print(
-                f"left, as {nums[left]}, left = {left} < {nums[right]}, right = {right}"
-            )
             pivot = left + 1
         else:
-            print("right")
             pivot = right + 1
 
         pivot %= len(nums)
         if pivot == 1:
             return bin_search(nums, target, pivot)
         else:
-            return bin_search(nums[pivot - 1:] + nums[: pivot - 1], target, pivot)
+            return bin_search(
+                nums[pivot - 1:] + nums[: pivot - 1],
+                target,
+                pivot
+            )
