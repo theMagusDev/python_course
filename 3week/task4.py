@@ -2,6 +2,7 @@
 https://leetcode.com/problem-list/array/
 https://leetcode.com/problems/jump-game-ii/description/
 """
+
 from typing import List
 
 
@@ -20,7 +21,9 @@ class Solution:
                 upper_bound_including = len(nums) - 1
             print(f"Upper bound is {upper_bound_including}")
             for i in range(current_positon + 1, upper_bound_including + 1):
-                print(f"Considering jumping from {current_positon} to {i} with power {power_list[i]}")
+                print(
+                    f"Considering jumping from {current_positon} to {i} with power {power_list[i]}"
+                )
                 if i == len(nums) - 1:
                     best_jump_index = i
                     break

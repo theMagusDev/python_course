@@ -2,6 +2,7 @@
 https://leetcode.com/problem-list/array/
 https://leetcode.com/problems/jump-game/description/
 """
+
 from typing import List
 
 
