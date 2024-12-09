@@ -8,10 +8,10 @@ class Solution:
     def checkInclusion(s1: str, s2: str) -> bool:
         if len(s1) > len(s2):
             return False
-        string1_letters = {chr(char): 0 for char in range(ord('a'), ord('z')+1)}
+        string1_letters = {chr(char): 0 for char in range(ord("a"), ord("z") + 1)}
         for char in s1:
             string1_letters[char] += 1
-        sliding_window = {chr(char): 0 for char in range(ord('a'), ord('z')+1)}
+        sliding_window = {chr(char): 0 for char in range(ord("a"), ord("z") + 1)}
         for i in range(len(s1)):
             sliding_window[s2[i]] += 1
         left_ptr = 0

@@ -16,7 +16,10 @@ class Solution:
             counter = 0
             resulting_str = ""
             while left_ptr <= len(current_str) - 1:
-                while right_ptr <= len(current_str) - 1 and current_str[left_ptr] == current_str[right_ptr]:
+                while (
+                    right_ptr <= len(current_str) - 1
+                    and current_str[left_ptr] == current_str[right_ptr]
+                ):
                     counter += 1
                     right_ptr += 1
                 resulting_str += str(counter) + current_str[left_ptr]

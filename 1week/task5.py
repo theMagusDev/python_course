@@ -3,8 +3,8 @@ https://leetcode.com/problem-list/string/
 https://leetcode.com/problems/set-matrix-zeroes/description/
 """
 
-
 from typing import List
+
 
 class Solution:
     def setZeroes(self, matrix: List[List[int]]) -> None:
@@ -27,4 +27,3 @@ class Solution:
         for zero_column in zero_columns:
             for i in range(m):
                 matrix[i][zero_column] = 0
-        

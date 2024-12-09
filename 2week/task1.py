@@ -13,4 +13,4 @@ class Solution:
         result = [word for word in formatted_string.split()]
         result.reverse()
 
-        return ' '.join(result)
+        return " ".join(result)

@@ -6,10 +6,10 @@ https://leetcode.com/problems/simplify-path/description/
 
 class Solution:
     def simplifyPath(self, path: str) -> str:
-        while '//' in path:
-            path = path.replace('//', '/')
-        path = path.strip('/')
-        list_input_path = path.split('/')
+        while "//" in path:
+            path = path.replace("//", "/")
+        path = path.strip("/")
+        list_input_path = path.split("/")
         list_final_path = list()
         command = ""
         while len(list_input_path) != 0:
@@ -26,4 +26,4 @@ class Solution:
         if len(list_final_path) == 0:
             list_final_path.append("/")
 
-        return ''.join(list_final_path)
+        return "".join(list_final_path)

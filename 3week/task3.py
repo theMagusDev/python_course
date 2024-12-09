@@ -43,8 +43,4 @@ class Solution:
         if pivot == 1:
             return bin_search(nums, target, pivot)
         else:
-            return bin_search(
-                nums[pivot - 1:] + nums[: pivot - 1],
-                target,
-                pivot
-            )
+            return bin_search(nums[pivot - 1 :] + nums[: pivot - 1], target, pivot)

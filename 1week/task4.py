@@ -41,4 +41,4 @@ class Solution:
                     s_dict.update({s[right_ptr]: 1})
         if saved_right_ptr == 10000 and saved_left_ptr == -10000:
             return ""
-        return s[saved_left_ptr:saved_right_ptr + 1]
+        return s[saved_left_ptr : saved_right_ptr + 1]
